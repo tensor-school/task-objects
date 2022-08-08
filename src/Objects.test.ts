@@ -91,9 +91,9 @@ describe('Работа с объектами', () => {
         it('Клонирование 5 объектов, поверхностное', () => {
             expect(
                 objectClone(
-                    {
+                    Object.freeze({
                         value: 0,
-                    },
+                    }),
                     5,
                 ),
             ).toEqual([
@@ -110,10 +110,10 @@ describe('Работа с объектами', () => {
                 title: 'simple object',
             };
             const result = objectClone(
-                {
+                Object.freeze({
                     value: true,
                     obj,
-                },
+                }),
                 3,
             );
             expect(result).toEqual([
