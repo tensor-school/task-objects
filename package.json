@@ -33,6 +33,7 @@
         "build": "tsc && vite build",
         "preview": "vite preview",
         "test": "jest --watchAll",
+        "test:build": "jest",
         "prepare": "husky install"
     },
     "browserslist": {
